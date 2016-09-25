@@ -1,0 +1,60 @@
+|  Welcome to JShell -- Version 9-ea
+|  For an introduction type: /help intro
+
+
+jshell> class Person {
+   ...> private float weight;
+   ...> public void setWeight(float w) {
+   ...> this.weight=w;
+   ...> }
+   ...> public float getWeight() {
+   ...> return weight;
+   ...> }
+   ...> }
+|  created class Person
+
+jshell> Person p = new Person();
+p ==> Person@239963d8
+
+jshell> p.setWeight((float)60.0);
+
+jshell> System.out.println(p.weight);
+|  Error:
+|  weight has private access in Person
+|  System.out.println(p.weight);
+|                     ^------^
+
+jshell> System.out.println(p.getWeight());
+60.0
+
+jshell> class Person {
+   ...> private float weight;
+   ...> public void setWeight(float w) {
+   ...> this.weight = w;
+   ...> }
+   ...> private float getWeight() {
+   ...> return weight;
+   ...> }
+   ...> }
+|  replaced class Person
+|    update replaced variable p, reset to null
+
+jshell> Person p = new Person();
+p ==> Person@4cf777e8
+
+jshell> p.setWeight((float)60.0);
+
+jshell> System.out.println(p.weight);
+|  Error:
+|  weight has private access in Person
+|  System.out.println(p.weight);
+|                     ^------^
+
+jshell> System.out.println(p.getWeight());
+|  Error:
+|  getWeight() has private access in Person
+|  System.out.println(p.getWeight());
+|                     ^---------^
+
+jshell> /edit
+                         
