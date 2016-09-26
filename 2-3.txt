@@ -1,0 +1,35 @@
+|  Welcome to JShell -- Version 9-ea
+|  For an introduction type: /help intro
+
+
+jshell> class BrazilCoffee {
+   ...> String origin;
+   ...> int degreeOfRoast;
+   ...> int grade;
+   ...> BrazilCoffee(String o) {
+   ...> origin=o;
+   ...> }
+   ...> public void roast()
+   ...> {
+   ...> System.out.println("roasting..."+origin);
+   ...> }
+   ...> public void grind() {
+   ...> System.out.println("grinding..."+origin);
+   ...> }
+   ...> public void brew() {
+   ...> System.out.println("brewing..."+origin);
+   ...> }
+   ...> }
+|  created class BrazilCoffee
+
+jshell> BrazilCoffee brazil= new BrazilCoffee("Brazil");
+brazil ==> BrazilCoffee@239963d8
+
+jshell> brazil.roast();
+roasting...Brazil
+
+jshell> brazil.grind();
+grinding...Brazil
+
+jshell> brazil.brew();
+brewing...Brazil
