@@ -1,0 +1,48 @@
+jshell> public class Rectangle {
+   ...> private int wid;
+   ...> private int hgt;
+   ...> public Rectangle(int w, int h) {
+   ...> this.wid=w;
+   ...> this.hgt=h;
+   ...> }
+   ...> public int getWidth() {
+   ...> return wid;
+   ...> }
+   ...> public int getHeight() {
+   ...> return hgt;
+   ...> }
+   ...> public void setHeight(int h) {
+   ...> hgt=h;
+   ...> }
+   ...> public void setWidth(int newWidth) {
+   ...> wid=newWidth;
+   ...> }
+   ...> public void setSize(int w, int h) {
+   ...> setWidth(w);
+   ...> setHeight(h);
+   ...> }
+   ...> public int calcArea() {
+   ...> return wid*hgt;
+   ...> }
+   ...> }
+
+jshell> Rectangle r = new Rectangle(3,4);
+r ==> Rectangle@57fffcd7
+
+jshell> r.calcArea();
+$5 ==> 12
+
+jshell> r.setSize(4,5);
+
+jshell> r.calcArea();
+$7 ==> 20
+
+jshell> r.setHeight(3);
+
+jshell> r.setWidth(5);
+
+jshell> r.calcArea();
+$10 ==> 15
+
+jshell> r.getWidth();
+$11 ==> 5
