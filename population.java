@@ -33,7 +33,7 @@ int m = 0;
 int w = 0;
 float me = 0;
 float we = 0;
-<<<<<<< HEAD
+
 
 for(int i=0; i<data.length; i++){
 m = data[i][0]+m;
