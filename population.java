@@ -33,6 +33,7 @@ int m = 0;
 int w = 0;
 float me = 0;
 float we = 0;
+<<<<<<< HEAD
 
 for(int i=0; i<data.length; i++){
 m = data[i][0]+m;
@@ -41,6 +42,17 @@ me = m/(i+1);
 we = w/(i+1);
 }
 System.out.printf("³²ÀÚ %d¸í, ¿©ÀÚ %d¸í, ³²ÀÚ Æò±Õ %f.1¸í, ¿©ÀÚ Æò±Õ %f.1¸í",m,w,me,we);
+=======
+for(int i=0; i<data.length; i++){
+m = data[i][0]+m;
+w = data[i][1]+w;
+me = m/(i+1)
+we = w/(i+1)
+}
+
+	
+System.out.printf("ë‚¨ìžëŠ” %dëª…, ì—¬ìžëŠ” %dëª…, ë‚¨ìž í‰ê·  %f.1, ì—¬ìž í‰ê·  %f.1",m,w,me,we);
+>>>>>>> origin/master
 }
 
 public static void main(String[] args) {
