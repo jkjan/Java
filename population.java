@@ -31,11 +31,16 @@ int[][] data={
 
 int m = 0;
 int w = 0;
+float me = 0;
+float we = 0;
+
 for(int i=0; i<data.length; i++){
 m = data[i][0]+m;
 w = data[i][1]+w;
+me = m/(i+1);
+we = w/(i+1);
 }
-System.out.printf("남자 %d명, 여자 %d명",m,w);
+System.out.printf("남자 %d명, 여자 %d명, 남자 평균 %f.1명, 여자 평균 %f.1명",m,w,me,we);
 }
 
 public static void main(String[] args) {
